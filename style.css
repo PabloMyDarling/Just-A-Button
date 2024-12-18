@@ -1,0 +1,33 @@
+body {
+    background-color: #333;
+    color: white;
+}
+
+@keyframes mainButtonHover {
+    0% { background-color: rgb(24, 141, 231) }
+    100% { background-color: rgb(21, 103, 165); }
+}
+
+@keyframes mainButtonLeave {
+    0% { background-color: rgb(21, 103, 165); }
+    100% { background-color: rgb(24, 141, 231) }
+}
+
+#mainButton {
+    height: 32px;
+    width: 185px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgb(24, 141, 231);
+    color: white;
+    font-family: Roboto, sans-serif;
+    border-width: 3px;
+    border-style: solid;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+
+#mainButton:hover { animation: mainButtonHover 510ms; animation-fill-mode: forwards; }
+#mainButton:not(:hover) { animation: mainButtonLeave 510ms; animation-fill-mode: forwards; }
