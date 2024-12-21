@@ -5,40 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Just A Button.</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3601/3601918.png">
+    <link rel="shortcut icon" href="assets/logo.png">
 </head>
 <body>
     <button id="mainButton" onclick="mainButtonClick()">This is a button.</button>
+    <label id="winLabel"></label>
     <audio id="clickSound" hidden> <source src="assets/click.mp3" type="audio/mp3"> </audio>
     <audio id="angrySound" hidden loop> <source src="assets/angry.mp3" type="audio/mp3"> </audio>
-    <script>
-        let click_count = 0;
-        let red = 200;
-        let playing = false;
-
-        function mainButtonClick() {
-            click_count++;
-            document.getElementById("clickSound").play();
-
-            if (click_count == 1) { document.getElementById("mainButton").textContent = "Hey, I'm ticklish!"; }
-            if (click_count == 2) { document.getElementById("mainButton").textContent = "Could you stop?"; }
-            if (click_count == 3) { document.getElementById("mainButton").textContent = "I said stop, it's annoying!"; }
-            if (click_count == 4) { document.getElementById("mainButton").textContent = "Dude, stop it! It hurts!!"; }
-            if (click_count == 5) { document.getElementById("mainButton").textContent = "Stop it!! You're tickling me!!"; }
-            if (click_count == 6) { document.getElementById("mainButton").textContent = "Stop it."; }
-            if (click_count == 7) { document.getElementById("mainButton").textContent = "STOP it."; }
-            if (click_count >= 8) {
-                document.getElementById("mainButton").textContent = "I SAID STOP.";
-                document.getElementById("mainButton").style.borderColor = "white";
-                document.body.style.background = `rgb(${red}, 0, 0)`;
-                if (red != 50) { red -= 5; }
-                if (!playing) {
-                    document.getElementById("angrySound").play();
-                    playing = true;
-                }
-            }
-        }
-
-    </script>
+    <audio id="loseSound" hidden loop> <source src="assets/lose.mp3" type="audio/mp3"> </audio>
+    <script src="script.js"></script>
 </body>
 </html>
