@@ -53,7 +53,7 @@ body {
     border-style: solid;
     transform: translate(-50%, -50%);
     position: fixed;
-    top: 50%;
+    top: 50%; border-color: #000;
     left: 50%;
     animation-fill-mode: forwards;
 }

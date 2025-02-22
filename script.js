@@ -5,6 +5,9 @@ let can_click = true;
 let need_to_click = 50;
 let time = 10;
 let streak_wins = 0;
+const increaseClicksBy = parseInt(localStorage.getItem("increaseClicksBy")) || 0;
+
+import increaseClicksBy from "./mainMenu.js";
 
 document.getElementById("winLabel").textContent = `Streak Wins: ${streak_wins}`;
 
@@ -99,7 +102,7 @@ async function boss() {
 
             // reset everything
             can_click = true;
-            need_to_click = Math.round(need_to_click + 65);
+            need_to_click = Math.round(need_to_click + increaseClicksBy);
             time += 10;
             game_clicks = 0;
             click_count = 0;
