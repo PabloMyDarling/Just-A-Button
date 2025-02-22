@@ -7,7 +7,7 @@ let time = 10;
 let streak_wins = 0;
 const increaseClicksBy = parseInt(localStorage.getItem("increaseClicksBy")) || 0;
 
-import increaseClicksBy from "./mainMenu.js";
+console.log(increaseClicksBy);
 
 document.getElementById("winLabel").textContent = `Streak Wins: ${streak_wins}`;
 
@@ -134,3 +134,6 @@ async function boss() {
         }
     }
 }
+
+document.getElementById("mainButton").addEventListener("click", mainButtonClick);
+
