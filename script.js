@@ -5,7 +5,8 @@ let can_click = true;
 let need_to_click = 50;
 let time = 10;
 let streak_wins = 0;
-const increaseClicksBy = parseInt(localStorage.getItem("increaseClicksBy")) || 0;
+const increaseClicksBy = parseInt(sessionStorage.getItem("increaseClicksBy")) || 40;
+const increaseTimeBy = parseInt(sessionStorage.getItem("increateTimeBy")) || 10
 
 console.log(increaseClicksBy);
 
@@ -103,7 +104,7 @@ async function boss() {
             // reset everything
             can_click = true;
             need_to_click = Math.round(need_to_click + increaseClicksBy);
-            time += 10;
+            time += increaseTimeBy;
             game_clicks = 0;
             click_count = 0;
             playing = false;
