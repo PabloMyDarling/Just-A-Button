@@ -9,6 +9,7 @@ const increaseClicksBy = parseInt(sessionStorage.getItem("increaseClicksBy")) ||
 const increaseTimeBy = parseInt(sessionStorage.getItem("increateTimeBy")) || 10
 
 console.log(increaseClicksBy);
+console.log(increaseTimeBy);
 
 document.getElementById("winLabel").textContent = `Streak Wins: ${streak_wins}`;
 
